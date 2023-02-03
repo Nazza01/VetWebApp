@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetWebApp", "VetWebApp\VetWebApp.csproj", "{CDC50DCF-BBD6-4651-843A-0CFD4FE355FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDC50DCF-BBD6-4651-843A-0CFD4FE355FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC50DCF-BBD6-4651-843A-0CFD4FE355FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC50DCF-BBD6-4651-843A-0CFD4FE355FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC50DCF-BBD6-4651-843A-0CFD4FE355FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC90F596-19A1-4CA1-9737-3D951A241954}
+	EndGlobalSection
+EndGlobal

@@ -8,4 +8,17 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Views\Services\" />
+    <None Remove="Views\AboutUs\" />
+    <None Remove="Views\LocateUs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Services\" />
+    <Folder Include="Views\AboutUs\" />
+    <Folder Include="Views\LocateUs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" />
+  </ItemGroup>
 </Project>

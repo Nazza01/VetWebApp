@@ -3,6 +3,9 @@
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Add Hot Reload
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

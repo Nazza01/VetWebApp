@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+            <div class="container-fluid font-access">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Vet App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +30,32 @@
                         </li>
                     </ul>
                 </div>
+                <div class="justify-content-end">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item fontStyle">
+                            <p>Font Style: </p>
+                        </li>
+                        <li class="nav-item fontStyle">
+                            <select id="fontType" onchange="fontType(this)">
+                                <option>Arial</option>
+                                <option disabled="true"></option>
+                                <option>Serif</option>
+                                <option>Monospace</option>
+                                <option>Cursive</option>
+                                <option>Fantasy</option>
+                            </select>
+                        </li>
+                        <li class="nav-item fontZoom">
+                            <button class="zoom" id="zoomIn" onclick="incSize()">+</button>
+                            <button class="zoom" id="zoomReset" onclick="resetSize()">A</button>
+                            <button class="zoom" id="zoomOut" onclick="decSize()">-</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container font-access">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

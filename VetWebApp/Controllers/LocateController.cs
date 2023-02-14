@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace VetWebApp.Controllers
 {
-    public class LocateUsController : Controller
+    public class LocateController : Controller
     {
-        // GET: /LocateUs/
-        public IActionResult Index()
+        // GET: /Locate/
+        public IActionResult Locate()
         {
             return View();
         }

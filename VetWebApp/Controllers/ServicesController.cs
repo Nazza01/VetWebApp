@@ -11,7 +11,7 @@ namespace VetWebApp.Controllers
     public class ServicesController : Controller
     {
         // GET: /Services/
-        public IActionResult Index()
+        public IActionResult Services()
         {
             return View();
         }

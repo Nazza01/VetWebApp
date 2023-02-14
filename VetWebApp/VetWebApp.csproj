@@ -10,7 +10,6 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Views\Services\" />
-    <None Remove="Views\AboutUs\" />
     <None Remove="Views\LocateUs\" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
@@ -75,13 +74,14 @@
     <None Remove="Content\Libraries\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
     <None Remove="Content\Libraries\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
     <None Remove="Content\Libraries\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Remove="Views\About\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Services\" />
-    <Folder Include="Views\AboutUs\" />
-    <Folder Include="Views\LocateUs\" />
+    <Folder Include="Views\Locate\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\lib\" />
+    <Folder Include="Views\About\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" />

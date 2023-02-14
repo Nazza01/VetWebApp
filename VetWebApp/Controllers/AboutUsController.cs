@@ -11,7 +11,7 @@ namespace VetWebApp.Controllers
 	public class AboutUsController : Controller
 	{
 		// GET: /AboutUs/
-		public IActionResult AboutUs()
+		public IActionResult Index()
 		{
 			return View();
 		}

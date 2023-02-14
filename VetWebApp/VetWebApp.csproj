@@ -16,11 +16,13 @@
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Content\Style\site.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Services\" />
     <Folder Include="Views\AboutUs\" />
     <Folder Include="Views\LocateUs\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" />
@@ -31,5 +33,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles\site.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 </Project>

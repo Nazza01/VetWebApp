@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Vet App</title>
     <link rel="stylesheet" href="~/Content/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/Styles/styles.css" />
+    <link rel="stylesheet" href="~/Content/css/styles.css" />
 </head>
 <body>
     <header>
@@ -28,8 +28,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Locate" asp-action="Locate">Locate</a>
                         </li>
                     </ul>
+                    <partial name="_LoginPartial"></partial>
                 </div>
-                <div class="justify-content-end">
+                @*<div class="justify-content-end">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item fontStyle">
                             <p>Font Style: </p>
@@ -50,14 +51,12 @@
                             <button class="zoom" id="zoomOut" onclick="decSize()">-</button>
                         </li>
                     </ul>
-                </div>
+                </div>*@
             </div>
         </nav>
     </header>
     <div class="container font-access">
-        <div class="title-container">
-            <div class="display-4 mx-auto">@ViewData["Title"]</div>
-        </div>
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

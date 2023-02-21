@@ -1,8 +1,15 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using VetWebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("VetWebAppContextConnection") ?? throw new InvalidOperationException("Connection string 'VetWebAppContextConnection' not found.");
+
+builder.Services.AddDbContext<VetWebAppContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<VetWebAppContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -52,6 +59,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Home}/{id?}");
+app.MapRazorPages();
 
 app.Run();
 

@@ -28,21 +28,27 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Locate" asp-action="Locate">Locate</a>
                         </li>
                     </ul>
+                    <button type="button" class="btn btn-primary" onclick="resetImage()">Reset</button>
+                    <div class="navbar-nav">
+                        <select class="animalSelect" onchange="setImage();">
+                            <option value="~/Content/backgrounds/dog.jpg">Dog</option>
+                            <option value="~/Content/backgrounds/cat.jpg">Cat</option>
+                            <option value="~/Content/backgrounds/both.jpg">Both</option>
+                        </select>
+                    </div>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container font-access">
-
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="footer text-muted">
+    <footer class="border-top footer text-muted bg-light">
         <div class="container">
-            &copy; 2023 - Vet App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Vet App - <a asp-area="" asp-controller="" asp-action="Admin">Admin</a>
         </div>
     </footer>
     <script src="~/Content/lib/jquery/dist/jquery.min.js"></script>

@@ -8,17 +8,21 @@
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
-  position: relative;
-  height: 100%;
+    position: relative;
+    min-height: 100%;       /*  this line fixed the border not sticking when content runs off page */
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
 }
 
 .card-img-top {
@@ -37,14 +41,6 @@ hr {
 
 .featurette-divider {
     margin: 5rem 0;
-}
-
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
 }
 
 /*  Google Map */

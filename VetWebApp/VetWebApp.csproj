@@ -77,6 +77,7 @@
     <None Remove="Views\About\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\backgrounds\" />
     <Folder Include="Logs\" />
     <Folder Include="Views\Services\" />
     <Folder Include="Views\Locate\" />

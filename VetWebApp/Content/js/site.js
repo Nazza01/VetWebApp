@@ -3,45 +3,14 @@
 
 // Write your JavaScript code.
 
-// Increases font size for each element with the class name "font-access"
-function incSize(e) {
-	var elements = document.getElementsByClassName("font-access");
-	for (var i = 0; i < elements.length; i++)
-	{
-		console.log("Increasing font size for: " + elements[i].style.fontFamily);
-		elements[i].style.fontSize = 'xx-large';
-	}
+
+function setImage() {
+	var img = document.getElementById("animalSelect");
+	img.options[animalSelect.selectedIndex].value;
 }
 
-function resetSize(e) {
-	var elements = document.getElementsByClassName("font-access");
-
-	for (var i = 0; i < elements.length; i++)
-	{
-		console.log("Resetting font size for: " + elements[i].style.fontFamily);
-		elements[i].style.fontSize = 'large';
-	}
+function resetImage() {
+	
 }
 
-function decSize(e) {
-	var elements = document.getElementsByClassName("font-access");
-
-	for (var i = 0; i < elements.length; i++)
-	{
-		console.log("Changing font size for: " + elements[i].style.fontFamily);
-		elements[i].style.fontSize = 'small';
-	}
-}
-
-// Font Styling
-
-function fontType(event) {
-	var fontfam = event.value;
-	var elements = document.getElementsByClassName("font-access");
-
-	for (var i = 0; i < elements.length; i++) {
-		console.log("Changing font type for: " + elements[i].style.fontFamily);
-		elements[i].style.fontFamily = fontfam;
-	}
-}
 

@@ -14,7 +14,7 @@
 
 html {
   position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -29,4 +29,36 @@ body {
 
 .card-title {
     border-radius: 20px;
+}
+
+hr {
+    opacity: 0.25;
+}
+
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+/*  Google Map */
+#map {
+    display: flex;
+    background-color: grey;
+    flex-grow: 2;
+}
+
+.mapinfo {
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    padding: 20px;
+    flex-grow: 3;
+    justify-content: center;
 }

@@ -1,9 +1,41 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "Locate";
 }
 
-<p>Hello from the Locate Page</p>
+<div class="container">
+    <h2>Locate Us</h2>
+    <p>Use the below map to find us at the below address</p>
+</div>
+
+<hr class="featurette-divider" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+        <br />
+        <div class="col-md-6">
+            <form class="my-form">
+                <div class="form-group">
+                    <label for="form-name">Name</label>
+                    <input type="email" class="form-control" id="form-name" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                    <label for="form-email">Email Address</label>
+                    <input type="email" class="form-control" id="form-email" placeholder="Email Address" />
+                </div>
+                <div class="form-group">
+                    <label for=""
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <iframe id="map" src="https://maps.google.com/maps?q=42Adelaide&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <div>
+        <h2>VetWebApp Address</h2>
+        <p>42 Adelaide, 28 Pitt Street, Adelaide SA, 5000</p>
+        <h2>Contact Us</h2>
+    </div>
+</div>
 

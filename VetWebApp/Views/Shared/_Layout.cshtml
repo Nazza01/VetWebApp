@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3">
             <div class="container-fluid font-access">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Home">Vet App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -28,30 +28,8 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Locate" asp-action="Locate">Locate</a>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial"></partial>
+                    <partial name="_LoginPartial" />
                 </div>
-                @*<div class="justify-content-end">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item fontStyle">
-                            <p>Font Style: </p>
-                        </li>
-                        <li class="nav-item fontStyle">
-                            <select id="fontType" onchange="fontType(this)">
-                                <option>Arial</option>
-                                <option disabled="true"></option>
-                                <option>Serif</option>
-                                <option>Monospace</option>
-                                <option>Cursive</option>
-                                <option>Fantasy</option>
-                            </select>
-                        </li>
-                        <li class="nav-item fontZoom">
-                            <button class="zoom" id="zoomIn" onclick="incSize()">+</button>
-                            <button class="zoom" id="zoomReset" onclick="resetSize()">A</button>
-                            <button class="zoom" id="zoomOut" onclick="decSize()">-</button>
-                        </li>
-                    </ul>
-                </div>*@
             </div>
         </nav>
     </header>
@@ -62,13 +40,10 @@
         </main>
     </div>
 
-    <footer class="border-top footer fixed-bottom text-muted">
-        <br />
+    <footer class="footer text-muted">
         <div class="container">
             &copy; 2023 - Vet App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-        <br />
-
     </footer>
     <script src="~/Content/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/Content/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

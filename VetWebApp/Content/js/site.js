@@ -7,24 +7,20 @@
 function setImage(index)
 {
 	var bgimg = document.body.style;
-	if (index == "dog")
-	{
+	if (index == "dog") {
 		bgimg.backgroundImage = "url('/Content/backgrounds/dog.jpg')";
-		bgimg.backgroundImage.opacity = 0.2;
 	}
-	else if (index == "cat")
-	{
+	else if (index == "cat") {
 		bgimg.backgroundImage = "url('/Content/backgrounds/cat.jpg')";
 	}
-	else if (index == "both")
-	{
+	else if (index == "both") {
 		bgimg.backgroundImage = "url('/Content/backgrounds/both.jpg')";
 	}
+	console.log("Changing background to: " + index);
 }
 
 function resetImage() {
 	console.log("Resetting background color");
-	document.body.style
-	document.body.style.backgroundColor = "white";
+	document.body.style.backgroundImage = "url('')";
 }
 

@@ -4,13 +4,27 @@
 // Write your JavaScript code.
 
 
-function setImage() {
-	var img = document.getElementById("animalSelect");
-	img.options[animalSelect.selectedIndex].value;
+function setImage(index)
+{
+	var bgimg = document.body.style;
+	if (index == "dog")
+	{
+		bgimg.backgroundImage = "url('/Content/backgrounds/dog.jpg')";
+		bgimg.backgroundImage.opacity = 0.2;
+	}
+	else if (index == "cat")
+	{
+		bgimg.backgroundImage = "url('/Content/backgrounds/cat.jpg')";
+	}
+	else if (index == "both")
+	{
+		bgimg.backgroundImage = "url('/Content/backgrounds/both.jpg')";
+	}
 }
 
 function resetImage() {
-	
+	console.log("Resetting background color");
+	document.body.style
+	document.body.style.backgroundColor = "white";
 }
-
 

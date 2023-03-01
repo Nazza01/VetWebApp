@@ -47,14 +47,7 @@ hr {
 #map {
     display: flex;
     background-color: grey;
-    flex-grow: 2;
-}
-
-.mapinfo {
-    display: flex;
-    flex-direction: column;
-    background-color: wheat;
-    padding: 20px;
-    flex-grow: 3;
-    justify-content: center;
+    flex-grow: 1;
+    width: 500px;
+    height: 500px;
 }

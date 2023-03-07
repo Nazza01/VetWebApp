@@ -6,7 +6,6 @@
     <title>@ViewData["Title"] - Vet App</title>
     <link rel="stylesheet" href="~/Content/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/css/styles.css" />
-    <script src="~/Content/js/site.js" asp-append-version="true"></script>
 </head>
 <body>
     <header>
@@ -47,8 +46,8 @@
             </div>
         </nav>
     </header>
-    <div id="bg-img" class="container">
-        <main role="main" class="pb-3">
+    <div class="container d-flex bg-white rounded p-3 bg-img">
+        <main role="main">
             @RenderBody()
         </main>
     </div>

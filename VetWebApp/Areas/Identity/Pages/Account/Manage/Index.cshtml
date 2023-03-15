@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h3>@ViewData["Title"]</h3>
+<partial name="_StatusMessage" for="StatusMessage" />
+<div class="row">
+    <div class="col-md-6">
+        <form id="profile-form" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FirstName" class="form-control" placeholder="Please enter your First/Given Name." />
+                <label asp-for="Input.FirstName" class="form-label"></label>
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.LastName" class="form-control" placeholder="Please enter your Last/Family Name." />
+                <label asp-for="Input.LastName" class="form-label"></label>
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
+                <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Suburb" class="form-control" placeholder="Please enter your Suburb." />
+                <label asp-for="Input.Suburb" class="form-label"></label>
+                <span asp-validation-for="Input.Suburb" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Postcode" class="form-control" placeholder="Please enter your Postcode." />
+                <label asp-for="Input.Postcode" class="form-label"></label>
+                <span asp-validation-for="Input.Postcode" class="text-danger"></span>
+            </div>
+            <h3>Pet Information</h3>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PetName" class="form-control" placeholder="Please enter your Pet's Name." />
+                <label asp-for="Input.PetName" class="form-label"></label>
+                <span asp-validation-for="Input.PetName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PetBreed" class="form-control" placeholder="Please enter your Pet's Breed." />
+                <label asp-for="Input.PetBreed" class="form-label"></label>
+                <span asp-validation-for="Input.PetBreed" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PetAge" class="form-control" placeholder="Please enter your Pet's Age." />
+                <label asp-for="Input.PetAge" class="form-label"></label>
+                <span asp-validation-for="Input.PetAge" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PetGender" class="form-control" placeholder="Please enter your Pet's Gender." />
+                <label asp-for="Input.PetGender" class="form-label"></label>
+                <span asp-validation-for="Input.PetGender" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PetImage" class="form-control" placeholder="Please enter your Pet's Image." />
+                <label asp-for="Input.PetImage" class="form-label"></label>
+                <span asp-validation-for="Input.PetImage" class="text-danger"></span>
+            </div>
+            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

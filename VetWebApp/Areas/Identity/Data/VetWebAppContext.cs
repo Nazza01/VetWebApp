@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using VetWebApp.Areas.Identity.Data;
 
 namespace VetWebApp.Data;
 
-public class VetWebAppContext : IdentityDbContext<IdentityUser>
+public class VetWebAppContext : IdentityDbContext<VetWebAppUser>
 {
     public VetWebAppContext(DbContextOptions<VetWebAppContext> options)
         : base(options)

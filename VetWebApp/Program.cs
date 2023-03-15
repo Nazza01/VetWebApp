@@ -3,13 +3,14 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using VetWebApp.Data;
+using VetWebApp.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("VetWebAppContextConnection") ?? throw new InvalidOperationException("Connection string 'VetWebAppContextConnection' not found.");
 
 builder.Services.AddDbContext<VetWebAppContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<VetWebAppContext>();
+builder.Services.AddDefaultIdentity<VetWebAppUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<VetWebAppContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

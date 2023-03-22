@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using VetWebApp.Areas.Identity.Data;
+using VetWebApp.Models;
 
 namespace VetWebApp.Data;
 
@@ -19,4 +20,6 @@ public class VetWebAppContext : IdentityDbContext<VetWebAppUser>
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+    public DbSet<VetWebApp.Models.AnimalDataModel> AnimalDataModel { get; set; } = default!;
 }

@@ -93,30 +93,6 @@ namespace VetWebApp.Areas.Identity.Pages.Account
             public int? Postcode { get; set; }
 
             [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Name")]
-            public string PetName { get; set; }
-
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Breed")]
-            public string PetBreed { get; set; }
-
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Age")]
-            public string PetAge { get; set; }
-
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Gender")]
-            public string PetGender { get; set; }
-
-            [Required]
-            [Display(Name = "Pet Image")]
-            public string ? PetImage { get; set; }
-
-            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -161,12 +137,6 @@ namespace VetWebApp.Areas.Identity.Pages.Account
                 user.Suburb = Input.Suburb;
                 user.Postcode = Input.Postcode;
                 
-                user.PetName = Input.PetName;
-                user.PetBreed = Input.PetBreed;
-                user.PetAge = Input.PetAge;
-                user.PetGender = Input.PetGender;
-                user.PetImage = Input.PetImage;
-
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

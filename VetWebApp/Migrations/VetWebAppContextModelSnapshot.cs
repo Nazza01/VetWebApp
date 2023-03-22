@@ -167,6 +167,9 @@ namespace VetWebApp.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -199,21 +202,6 @@ namespace VetWebApp.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetAge")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetBreed")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetGender")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")

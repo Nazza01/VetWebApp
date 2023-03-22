@@ -73,58 +73,20 @@ namespace VetWebApp.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Postcode")]
             public int ? Postcode { get; set; }
 
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Name")]
-            public string PetName { get; set; }
-
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Breed")]
-            public string PetBreed { get; set; }
-
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Age")]
-            public string PetAge { get; set; }
-
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Pet Gender")]
-            public string PetGender { get; set; }
-
-            [Required]
-            [Display(Name = "Pet Image")]
-            public string ? PetImage { get; set; }
-
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
-            [Phone]
-            [Display(Name = "Phone number")]
-            public string PhoneNumber { get; set; }
         }
 
         private async Task LoadAsync(VetWebAppUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
             Username = userName;
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Suburb = user.Suburb,
                 Postcode = user.Postcode,
-                PetName = user.PetName,
-                PetBreed = user.PetGender,
-                PetAge = user.PetAge,
-                PetGender = user.PetGender,
-                PetImage = user.PetImage
             };
         }
 
@@ -154,17 +116,6 @@ namespace VetWebApp.Areas.Identity.Pages.Account.Manage
                 return Page();
             }
 
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
-            {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
-                {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
-                    return RedirectToPage();
-                }
-            }
-
             if (Input.FirstName != user.FirstName)
             {
                 user.FirstName = Input.FirstName;
@@ -180,26 +131,6 @@ namespace VetWebApp.Areas.Identity.Pages.Account.Manage
             if (Input.Postcode != user.Postcode)
             {
                 user.Postcode = Input.Postcode;
-            }
-            if (Input.PetName != user.PetName)
-            {
-                user.PetName = Input.PetName;
-            }
-            if (Input.PetBreed != user.PetBreed)
-            {
-                user.PetBreed = Input.PetBreed;
-            }
-            if (Input.PetAge != user.PetAge)
-            {
-                user.PetAge = Input.PetAge;
-            }
-            if (Input.PetGender != user.PetGender)
-            {
-                user.PetGender = Input.PetGender;
-            }
-            if (Input.PetImage != user.PetImage) 
-            {
-                user.PetImage = Input.PetImage;
             }
             await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);
